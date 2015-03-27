@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="admin">
+<head>
+    <meta charset="UTF-8">
+    <title>后台内容管理</title>
+    <link rel="stylesheet" href="/resource/css/common.css" />
+    <link rel="stylesheet" href="/resource/css/font.css" />
+    <link rel="stylesheet" href="/resource/css/ui.css" />
+    <link rel="stylesheet" href="/resource/css/admin/content.css" />
+    <link rel="stylesheet" href="/resource/css/admin/layout.css" />
+
+</head>
+<body>
+    <header>
+        <span id="logo">后台管理系统</span>
+        <nav>
+            <ul class="clearfix">
+                <li class="selected">
+                    <a href="#">内容</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+            
+    <div class="wrapper" ng-controller="contentController">
+        <div id="editor">
+            <textarea name="ckeditor" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <div id="form">
+            <dl class="clearfix">
+                <dt>文章类型</dt>
+                <dd>
+                    <div id="type" class="select" data-id="3">
+                        <span class="select-value"></span>
+                        <i></i>
+                        <div class="select-wrapper">
+                            <div class="select-list">
+                                <ul>
+                                    <li>评测</li>
+                                    <li>推荐</li>
+                                    <li>新闻</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            
+            <dl class="clearfix">
+                <dt>作者</dt>
+                <dd>
+                    <div id="author" class="select" data-id="1">
+                        <span class="select-value">sunken</span>
+                        <i></i>
+                        <div class="select-wrapper">
+                            <div class="select-list">
+                                <ul>
+                                    <li>sunken</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="timer" for="">定时发送</label>
+                    <input class="textbox" type="text" placeholder="2014.11.11 11:11:11" />
+                </dd>
+            </dl>
+
+            <dl class="clearfix">
+                <dt>标题</dt>
+                <dd>
+                    <input id="title" class="textbox" type="text" placeholder="测试的占位标题" />
+                </dd>
+            </dl>
+
+            <dl class="clearfix">
+                <dt>推荐内容</dt>
+                <dd>
+                    <textarea id="tweet-content" name="" id="" cols="30" rows="10">textarea内容应该用value属性获取</textarea>
+                </dd>
+            </dl>
+
+            <dl class="clearfix">
+                <dt></dt>
+                <dd>
+                    <div id="upload">
+                        <input class="textbox" type="text" value="图片上传的占位" />
+                    </div>
+                </dd>
+            </dl>
+            <dl class="clearfix">
+                <dt></dt>
+                <dd>
+                    <button id="submit" class="button" ng-click="addContent()">发送</button>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    
+    <script src="/resource/js/lib/angular/angular.js"></script>
+    <script src="/resource/js/lib/angular/angular-resource.js"></script>
+    <script src="/resource/js/lib/jquery/jquery.min.js"></script>
+    <script src="/resource/js/plugin/ckeditor/ckeditor.js"></script>
+    <script src="/resource/js/module/admin/content.js"></script>
+
+    <script src="/resource/js/me/core.js"></script>
+    <script src="/resource/js/me/ui.js"></script>
+    <script src="/resource/js/me/ui-form.js"></script>
+
+</body>
+</html>

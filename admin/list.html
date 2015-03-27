@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="admin">
+<head>
+    <meta charset="UTF-8">
+    <title>后台内容管理</title>
+    <link rel="stylesheet" href="/resource/css/common.css" />
+    <link rel="stylesheet" href="/resource/css/font.css" />
+    <link rel="stylesheet" href="/resource/css/ui.css" />
+    <link rel="stylesheet" href="/resource/css/admin/list.css" />
+    <link rel="stylesheet" href="/resource/css/admin/layout.css" />
+
+</head>
+<body>
+    <header>
+        <span id="logo">后台管理系统</span>
+        <nav>
+            <ul class="clearfix">
+                <li class="selected">
+                    <a href="#">内容</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+            
+    <div class="wrapper" ng-controller="listController">
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>create_date</th>
+                <th>author_id</th>
+                <th>操作</th>
+            </tr>
+
+            <tr ng-repeat="c in contents">
+                <td>{{ c.id }}</td>
+                <td>{{ c.title }}</td>
+                <td>{{ c.create_date }}</td>
+                <td>{{ c.author_id }}</td>
+                <td>
+                    <a href="" ng-click="deleteContent(c.id)">删除</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="/resource/js/lib/angular/angular.js"></script>
+    <script src="/resource/js/lib/angular/angular-resource.js"></script>
+    <script src="/resource/js/module/admin/list.js"></script>
+</body>
+</html>
