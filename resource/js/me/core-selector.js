@@ -1,3 +1,6 @@
+'use strict'
+
+
 ME.core.selector = {}
 
 // 这种写法支持ie8+，使用css选择器

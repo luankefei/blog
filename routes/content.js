@@ -1,3 +1,6 @@
+'use strict'
+
+
 var Content = require('../models/content')
 
 
@@ -51,7 +54,7 @@ var getContentCount = function(res) {
  */
 exports.getContent = function(req, res) {
 
-    var range = req.headers.range
+    var range = req.headers.range,
         start = null,
         end = null,
         expect = req.headers.except

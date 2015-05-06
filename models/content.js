@@ -1,3 +1,5 @@
+'use strict'
+
 
 var pool = require('../models/db.js')
 
@@ -71,7 +73,6 @@ Content.getContent = function(start, end, callback) {
         sql = 'select * from content'
 
     }
-
 
     pool.acquire(function(err, client) {
             
@@ -173,7 +174,6 @@ Content.addContent = function(data, callback) {
         }
     })
 }   // end function -> addContent
-
 
 
 module.exports = Content

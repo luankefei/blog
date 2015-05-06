@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * @name commentController
  * @description 此文件通过调用models/comment文件，对评论内容进行基本操作

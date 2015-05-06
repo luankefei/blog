@@ -1,3 +1,6 @@
+'use strict'
+
+
 var pool = require('../models/db.js')
 
 

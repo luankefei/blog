@@ -1,3 +1,6 @@
+'use strict'
+
+
 ME.ui.form = {}
 
 ME.ui.form.initDropdown = function() {

@@ -1,3 +1,6 @@
+'use strict'
+
+
 ME.core.loader = {}
 
 ME.core.loadering = false

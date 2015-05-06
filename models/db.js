@@ -1,3 +1,4 @@
+'use strict'
 
 
 var poolModule = require('generic-pool'),
